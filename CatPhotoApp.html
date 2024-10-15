@@ -1,4 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CatPhotoApp</title>
+  </head>
   <body>
     <main>
       <h1>CatPhotoApp</h1>
@@ -52,9 +57,63 @@
       <section>
         <h2>Cat Form</h2>
         <form action="https://freecatphotoapp.com/submit-cat-photo">
-          <input type="text" name="catphotourl" placeholder="cat photo URL" />
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label
+              ><input
+                checked
+                value="indoor"
+                name="indoor-outdoor"
+                id="indoor"
+                type="radio"
+              />
+              Indoor</label
+            >
+            <label
+              ><input
+                value="outdoor"
+                name="indoor-outdoor"
+                id="outdoor"
+                type="radio"
+              />
+              Outdoor</label
+            >
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input
+              checked
+              value="loving"
+              name="personality"
+              id="loving"
+              type="checkbox"
+            />
+            <label for="loving">Loving</label>
+            <input value="lazy" name="personality" id="lazy" type="checkbox" />
+            <label for="lazy">Lazy</label>
+            <input
+              value="energetic"
+              name="personality"
+              id="energetic"
+              type="checkbox"
+            />
+            <label for="energetic">Energetic</label>
+          </fieldset>
+          <input
+            required
+            type="text"
+            name="catphotourl"
+            placeholder="cat photo URL"
+          />
+          <button type="submit">Submit</button>
         </form>
       </section>
     </main>
+    <footer>
+      <p>
+        No Copyright -
+        <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
   </body>
 </html>
